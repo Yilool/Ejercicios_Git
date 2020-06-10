@@ -6,3 +6,4 @@ this is the best file in this class
 
 creando conflicto desde master
 
+creando conflicto desde conflicto 
