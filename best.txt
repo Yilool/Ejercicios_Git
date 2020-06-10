@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 this is the best file in the world
-=======
-this is the best file in this class
->>>>>>> 8efa013... conflicto
 
 creando conflicto desde master
 
