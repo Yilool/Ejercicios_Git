@@ -1,0 +1,271 @@
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop
+$ git clone https://github.com/Yilool/Ejercicios_Git.git
+Cloning into 'Ejercicios_Git'...
+remote: Enumerating objects: 24, done.
+remote: Total 24 (delta 0), reused 0 (delta 0), pack-reused 24
+Receiving objects: 100% (24/24), done.
+Resolving deltas: 100% (7/7), done.
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop
+$ cd Ejer
+Ejer b/              Ejercicio 2_DDL.sql  Ejercicio 2_DML.sql  Ejercicios_Git/
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop
+$ cd Ejer
+Ejer b/              Ejercicio 2_DDL.sql  Ejercicio 2_DML.sql  Ejercicios_Git/
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop
+$ cd Ejercicios_Git/
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master)
+$ git remote -v
+origin  https://github.com/Yilool/Ejercicios_Git.git (fetch)
+origin  https://github.com/Yilool/Ejercicios_Git.git (push)
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master)
+$ git remote add upstream https://github.com/joadelvia/Ejercicios_Git.git
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master)
+$ git remote -v
+origin  https://github.com/Yilool/Ejercicios_Git.git (fetch)
+origin  https://github.com/Yilool/Ejercicios_Git.git (push)
+upstream        https://github.com/joadelvia/Ejercicios_Git.git (fetch)
+upstream        https://github.com/joadelvia/Ejercicios_Git.git (push)
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master)
+$ git pull -r upstream master
+From https://github.com/joadelvia/Ejercicios_Git
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> upstream/master
+error: could not apply 8efa013... conflicto
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 8efa013... conflicto
+Auto-merging best.txt
+CONFLICT (content): Merge conflict in best.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ cd ..
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop
+$ mkdir branch_time
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop
+$ cd branch_time/
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time
+$ git init
+Initialized empty Git repository in C:/Users/yxiangch/Desktop/branch_time/.git/
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (master)
+$ touch first.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (master)
+$ git add first.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (master)
+$ git commit -m "Añadir first.txt"
+[master (root-commit) 3c57fa2] Añadir first.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (master)
+$ git branch amazing_feature
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (master)
+$ git checkout amazing_feature
+Switched to branch 'amazing_feature'
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (amazing_feature)
+$ nano best.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (amazing_feature)
+$ git add best.txt
+warning: LF will be replaced by CRLF in best.txt.
+The file will have its original line endings in your working directory
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (amazing_feature)
+$ git commit -m "added best.txt"
+[amazing_feature f205f6b] added best.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 best.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (amazing_feature)
+$ git checkout master
+Switched to branch 'master'
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (master)
+$ git merge amazing_feature
+Updating 3c57fa2..f205f6b
+Fast-forward
+ best.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 best.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/branch_time (master)
+$ git branch -d amazing_feature
+Deleted branch amazing_feature (was f205f6b).
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git checkout -b conflicto
+Switched to a new branch 'conflicto'
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ nano best.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git add best.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git commit -m "Creando conflicto con conflicto"
+[conflicto 79ad926] Creando conflicto con conflicto
+ 1 file changed, 1 insertion(+)
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git push origin conflict
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'conflict' on GitHub by visiting:
+remote:      https://github.com/Yilool/Ejercicios_Git/pull/new/conflict
+remote:
+To https://github.com/Yilool/Ejercicios_Git.git
+ * [new branch]      conflict -> conflict
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git push origin conflicto
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 608 bytes | 121.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'conflicto' on GitHub by visiting:
+remote:      https://github.com/Yilool/Ejercicios_Git/pull/new/conflicto
+remote:
+To https://github.com/Yilool/Ejercicios_Git.git
+ * [new branch]      conflicto -> conflicto
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ nano best.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git add best.txt
+warning: LF will be replaced by CRLF in best.txt.
+The file will have its original line endings in your working directory
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git commit -m "otravez master"
+[master 4ab3b57] otravez master
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 310 bytes | 103.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Yilool/Ejercicios_Git.git
+   965993c..4ab3b57  master -> master
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git checkout conflicto
+Switched to branch 'conflicto'
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ nano best.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git commit -m "otravez conflicto"
+On branch conflicto
+Last commands done (3 commands done):
+   pick f862d03 conflicto
+   pick 8efa013 conflicto
+  (see more in file .git/rebase-merge/done)
+No commands remaining.
+You are currently editing a commit while rebasing branch 'master' on '0283ca9'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   best.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        branch_time/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git commit -am "otravez conflicto"
+[conflicto d27b303] otravez conflicto
+ 1 file changed, 4 deletions(-)
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git push origin conflicto
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 287 bytes | 95.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Yilool/Ejercicios_Git.git
+   79ad926..d27b303  conflicto -> conflicto
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git merge
+conflict           HEAD               origin/conflict    origin/master
+conflicto          master             origin/conflicto   REBASE_HEAD
+FETCH_HEAD         ORIG_HEAD          origin/HEAD        upstream/master
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git merge
+conflict           HEAD               origin/conflict    origin/master
+conflicto          master             origin/conflicto   REBASE_HEAD
+FETCH_HEAD         ORIG_HEAD          origin/HEAD        upstream/master
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git merge conflict
+Already up to date.
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git merge conflict
+conflict    conflicto
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git merge conflicto
+Auto-merging best.txt
+CONFLICT (content): Merge conflict in best.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ nano best.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git commit -am "otravez conflicto otravez"
+[master fecc5c3] otravez conflicto otravez
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git (master|REBASE 3/3)
+$ git merge conflicto
+Already up to date.
+

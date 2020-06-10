@@ -1,0 +1,115 @@
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master
+$ mkdir destruction
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master
+$ cd destruction
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction
+$ git init
+Initialized empty Git repository in C:/Users/yxiangch/Desktop/Ejercicios_Git-master/destruction/.git/
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ touch stage_me.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git add stage_me.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git add stage_me.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git checkout stage_me.txt
+Updated 0 paths from the index
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git add stage_me.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git reset stage_me.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ rm stage_me.txt
+
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ touch commit_me.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git add commit_me.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git commit -m "adding commit_me.txt"
+[master (root-commit) b733af1] adding commit_me.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 commit_me.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ touch second.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git add second.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git commit -m "adding second.txt"
+[master 69769aa] adding second.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 second.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git log --oneline
+69769aa (HEAD -> master) adding second.txt
+b733af1 adding commit_me.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git reset --mixed
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git add second.txt
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git commit -m "Trying to commit again"
+On branch master
+nothing to commit, working tree clean
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git reset --soft
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git commit -m "Trying to commit again and again"
+On branch master
+nothing to commit, working tree clean
+
+yxiangch@SVQ-53S3L12 MINGW64 ~/Desktop/Ejercicios_Git-master/destruction (master)
+$ git reset --hard
+HEAD is now at 69769aa adding second.txt
